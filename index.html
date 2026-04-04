@@ -202,6 +202,61 @@
             color: #2980b9;
         }
         
+        .club-invite {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 40px;
+            border-radius: 12px;
+            margin: 50px 0 40px 0;
+            text-align: center;
+        }
+        
+        .club-content h3 {
+            margin: 0 0 15px 0;
+            font-size: 28px;
+            color: white;
+        }
+        
+        .club-content > p {
+            font-size: 18px;
+            margin-bottom: 25px;
+            opacity: 0.95;
+        }
+        
+        .club-benefits {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin: 25px 0;
+            text-align: left;
+        }
+        
+        .benefit {
+            font-size: 16px;
+            padding: 10px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 6px;
+            backdrop-filter: blur(10px);
+        }
+        
+        .club-button {
+            display: inline-block;
+            background: white;
+            color: #667eea;
+            padding: 15px 40px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 18px;
+            margin-top: 20px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .club-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+        
         footer {
             margin-top: 50px;
             padding-top: 30px;
@@ -234,6 +289,27 @@
             
             .content-image {
                 height: 200px;
+            }
+            
+            .club-invite {
+                padding: 30px 20px;
+            }
+            
+            .club-content h3 {
+                font-size: 22px;
+            }
+            
+            .club-content > p {
+                font-size: 16px;
+            }
+            
+            .club-benefits {
+                grid-template-columns: 1fr;
+            }
+            
+            .club-button {
+                font-size: 16px;
+                padding: 12px 30px;
             }
         }
     </style>
@@ -350,6 +426,20 @@
                 <a href="#" class="related-link">→ Как выбрать кафельную плитку для ванной: 5 основных критериев</a>
             </div>
         </article>
+        
+        <div class="club-invite">
+            <div class="club-content">
+                <h3>🌟 Присоединяйтесь к закрытому клубу "ПРОСТО БЫТЬ"</h3>
+                <p>Получите доступ к эксклюзивным материалам, разборам интерьеров и профессиональным консультациям по дизайну от Ольги Качановой.</p>
+                <div class="club-benefits">
+                    <div class="benefit">✓ Закрытые разборы реальных интерьеров</div>
+                    <div class="benefit">✓ Персональные консультации по вашим проектам</div>
+                    <div class="benefit">✓ Чек-листы и гайды по ремонту</div>
+                    <div class="benefit">✓ Сообщество единомышленников</div>
+                </div>
+                <a href="https://kakzhivutdrugie.ru/club" class="club-button">Узнать больше о клубе</a>
+            </div>
+        </div>
         
         <footer>
             <p><strong>Как живут другие</strong> — полезные материалы о дизайне и обустройстве дома</p>

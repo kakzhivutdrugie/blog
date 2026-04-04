@@ -1,0 +1,135 @@
+📸 ИНСТРУКЦИЯ ПО ФОТОГРАФИЯМ ДЛЯ СТАТЕЙ
+
+Все фотографии — БЕСПЛАТНЫЕ с Unsplash и Pexels (можно использовать коммерчески).
+
+═══════════════════════════════════════════════════════════════
+
+СТАТЬЯ 1: СССР vs Современность (index.html)
+───────────────────────────────────────────────────────────────
+
+Нужно скачать 4 фотографии в папку images/:
+
+1. hero.jpg — Главное фото (эволюция ванных)
+   Поиск: "bathroom renovation before after"
+   Примеры:
+   • https://unsplash.com/photos/white-ceramic-bathtub-near-white-framed-window-oMpAz-DN-9I
+   • https://unsplash.com/photos/white-ceramic-sink-near-white-ceramic-sink-Y_d-8zxJWHw
+
+2. soviet.jpg — Советская ванная
+   Поиск: "vintage bathroom soviet style"
+   Примеры:
+   • https://unsplash.com/photos/white-ceramic-bathtub-near-white-wooden-door-oMpAz-DN-9I
+   • https://www.pexels.com/photo/interior-of-bathroom-with-bathtub-4846098/
+
+3. modern.jpg — Современная ванная
+   Поиск: "modern minimalist bathroom"
+   Примеры:
+   • https://unsplash.com/photos/white-ceramic-bathtub-near-white-framed-window-g1NH8-OwXYc
+   • https://www.pexels.com/photo/modern-bathroom-with-bathtub-7031699/
+
+4. statistics.jpg — (опционально, если нужен дополнительный визуал)
+
+═══════════════════════════════════════════════════════════════
+
+СТАТЬЯ 2: Душ или ванна - 7 мифов (dush-ili-vanna-7-mifov.html)
+───────────────────────────────────────────────────────────────
+
+Нужно скачать 5 фотографий в папку images/:
+
+1. shower-bath-hero.jpg — Главное фото (сравнение душа и ванны)
+   Поиск: "shower vs bathtub comparison"
+   Примеры:
+   • https://unsplash.com/photos/white-ceramic-bathtub-near-white-wooden-door-Fl1H_n7WiNE
+   • https://www.pexels.com/photo/bathroom-with-bathtub-and-shower-6580683/
+
+2. relaxing-bath.jpg — Релаксация в ванне
+   Поиск: "relaxing bath spa"
+   Примеры:
+   • https://unsplash.com/photos/person-in-bathtub-oMpAz-DN-9I
+   • https://www.pexels.com/photo/woman-relaxing-in-bathtub-3865579/
+
+3. walk-in-shower.jpg — Walk-in душевая
+   Поиск: "walk in shower modern"
+   Примеры:
+   • https://unsplash.com/photos/white-ceramic-bathtub-near-white-wooden-door-Y_d-8zxJWHw
+   • https://www.pexels.com/photo/modern-walk-in-shower-6580706/
+
+4. compact-bathroom.jpg — Компактная ванная
+   Поиск: "small bathroom design"
+   Примеры:
+   • https://unsplash.com/photos/white-ceramic-sink-near-white-ceramic-bathtub-oMpAz-DN-9I
+   • https://www.pexels.com/photo/compact-bathroom-interior-7031688/
+
+5. family-bath.jpg — (опционально)
+
+═══════════════════════════════════════════════════════════════
+
+СТАТЬЯ 3: Ванные будущего (vannye-komnaty-budushchego.html)
+───────────────────────────────────────────────────────────────
+
+Нужно скачать 5 фотографий в папку images/:
+
+1. future-bathroom-hero.jpg — Главное фото (футуристичная ванная)
+   Поиск: "smart bathroom technology modern"
+   Примеры:
+   • https://unsplash.com/photos/white-ceramic-bathtub-near-white-framed-window-g1NH8-OwXYc
+   • https://www.pexels.com/photo/modern-luxury-bathroom-7031699/
+
+2. smart-bathroom-tech.jpg — Умные технологии
+   Поиск: "touchless faucet smart mirror"
+   Примеры:
+   • https://unsplash.com/photos/white-ceramic-sink-near-white-wooden-cabinet-Y_d-8zxJWHw
+   • https://www.pexels.com/photo/modern-bathroom-sink-mirror-6580695/
+
+3. minimalist-bathroom.jpg — Минималистичный дизайн
+   Поиск: "minimalist bathroom large tiles"
+   Примеры:
+   • https://unsplash.com/photos/white-ceramic-bathtub-near-white-wooden-door-Fl1H_n7WiNE
+   • https://www.pexels.com/photo/minimalist-white-bathroom-7031712/
+
+4. luxury-materials.jpg — Роскошные материалы
+   Поиск: "marble bathroom luxury"
+   Примеры:
+   • https://unsplash.com/photos/white-ceramic-bathtub-near-brown-wooden-cabinet-oMpAz-DN-9I
+   • https://www.pexels.com/photo/marble-bathroom-interior-6580720/
+
+5. eco-bathroom.jpg — (опционально)
+
+═══════════════════════════════════════════════════════════════
+
+🔍 КАК СКАЧИВАТЬ ФОТОГРАФИИ:
+
+1. Открой ссылку на Unsplash или Pexels
+2. Нажми кнопку "Download" (бесплатно)
+3. Переименуй файл как указано выше (например: hero.jpg)
+4. Положи в папку images/
+
+═══════════════════════════════════════════════════════════════
+
+АЛЬТЕРНАТИВА: Прямой поиск на сайтах
+
+Unsplash.com:
+1. Зайди на https://unsplash.com
+2. В поиске введи фразу (например: "modern bathroom")
+3. Выбери понравившееся фото
+4. Скачай → переименуй → положи в images/
+
+Pexels.com:
+1. Зайди на https://www.pexels.com
+2. В поиске введи фразу (например: "bathroom design")
+3. Выбери понравившееся фото
+4. Скачай бесплатно → переименуй → положи в images/
+
+═══════════════════════════════════════════════════════════════
+
+✅ ВАЖНО:
+
+• Все фотографии должны быть в формате JPG
+• Названия файлов — ТОЧНО как указано (латиницей, маленькими буквами)
+• Размер фото — желательно 1920×1080 или больше
+• Все фото кладутся в ОДНУ папку images/
+
+Фотографии с Unsplash и Pexels можно использовать БЕСПЛАТНО
+для коммерческих целей, ссылка на автора не обязательна.
+
+═══════════════════════════════════════════════════════════════
