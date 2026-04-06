@@ -48,6 +48,13 @@
         .club-link a:hover { text-decoration: underline; }
         .back-link { display: inline-block; margin-top: 40px; color: #4299e1; text-decoration: none; font-weight: 600; }
         @media (max-width: 768px) { h1 { font-size: 28px; } .content { padding: 20px; } }
+    
+        .photo-gallery { margin: 40px 0; }
+        .photo-gallery h3 { font-size: 20px; margin-bottom: 20px; color: #2d3748; text-align: center; }
+        .gallery-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin-bottom: 30px; }
+        .gallery-item img { width: 100%; height: 250px; object-fit: cover; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); transition: transform 0.3s; }
+        .gallery-item img:hover { transform: scale(1.05); box-shadow: 0 4px 8px rgba(0,0,0,0.2); }
+        .gallery-caption { text-align: center; margin-top: 10px; font-size: 14px; color: #718096; }
     </style>
 
 <!-- Yandex.Metrika counter -->
@@ -386,7 +393,23 @@ ym(106776897, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLa
                 <p>Не гонитесь за дешевизной — качественная мебель прослужит 10-15 лет, а замена обычной каждые 3 года обойдётся дороже. Инвестируйте в надёжность!</p>
             </div>
             
-            <a href="https://kakzhivutdrugie.ru" class="back-link">← Вернуться на главную страницу</a>
+            
+
+                <div class="photo-gallery">
+                    <h3>📸 Примеры из реальных проектов</h3>
+                    <div class="gallery-grid">
+                        <div class="gallery-item">
+                            <img src="images/white-eclectic-2.jpg" alt="Подвесная тумба с декоративной перфорацией">
+                            <p class="gallery-caption">Подвесная тумба с декоративной перфорацией</p>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="images/terracotta-3.jpg" alt="Деревянная тумба на чёрных металлических ножках">
+                            <p class="gallery-caption">Деревянная тумба на чёрных металлических ножках</p>
+                        </div>
+                    </div>
+                </div>
+
+                <a href="https://kakzhivutdrugie.ru" class="back-link">← Вернуться на главную страницу</a>
         </article>
     </div>
 </body>
