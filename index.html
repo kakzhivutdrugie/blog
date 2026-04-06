@@ -33,6 +33,8 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
         }
         
         .logo {
@@ -42,16 +44,29 @@
             text-decoration: none;
         }
         
+        .nav-menu {
+            display: flex;
+            gap: 25px;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        
         .nav-link {
             color: #000;
             text-decoration: none;
             font-weight: 400;
             font-size: 14px;
             transition: color 0.3s;
+            white-space: nowrap;
         }
         
         .nav-link:hover {
-            color: #999;
+            color: #81D8D0;
+        }
+        
+        .nav-link.active {
+            color: #81D8D0;
+            font-weight: 600;
         }
         
         /* Breadcrumb */
@@ -74,10 +89,10 @@
         
         /* Hero */
         .hero {
-            background-color: #d1d1d1;
+            background-color: #81D8D0;
             padding: 80px 20px;
             text-align: center;
-            color: #000;
+            color: #fff;
         }
         
         .hero h1 {
@@ -269,7 +284,18 @@ ym(106776897, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLa
     <header class="header">
         <div class="header-container">
             <a href="https://kakzhivutdrugie.ru" class="logo">Как Живут Другие</a>
-            <a href="https://kakzhivutdrugie.ru/klub#rec1894062431" class="nav-link">Клуб «Просто быть»</a>
+            <nav class="nav-menu">
+                <a href="/" class="nav-link active">Главная</a>
+                <a href="/vannye-komnaty.html" class="nav-link">Ванные комнаты</a>
+                <a href="/kuhni.html" class="nav-link">Кухни</a>
+                <a href="/spalni.html" class="nav-link">Спальни</a>
+                <a href="/gostinye.html" class="nav-link">Гостиные</a>
+                <a href="/prihozhie.html" class="nav-link">Прихожие</a>
+                <a href="/detskie.html" class="nav-link">Детские</a>
+                <a href="/kabinety.html" class="nav-link">Кабинеты</a>
+                <a href="/stil-zhizni.html" class="nav-link">Стиль жизни</a>
+                <a href="https://kakzhivutdrugie.ru/klub#rec1894062431" class="nav-link">Клуб</a>
+            </nav>
         </div>
     </header>
     
