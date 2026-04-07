@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Блог | Как живут другие</title>
+    <meta name="description" content="Статьи о дизайне ванных комнат, ремонте и организации пространства от Ольги Качановой.">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.7;
+            color: #2d3748;
+            background-color: #d1d1d1;
+        }
+        
+        /* Header */
+        .header {
+            background-color: #fff;
+            padding: 30px 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        .header-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        
+        .logo {
+            font-size: 20px;
+            color: #000;
+            font-weight: 700;
+            text-decoration: none;
+        }
+        
+        .nav-menu {
+            display: flex;
+            gap: 25px;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        
+        .nav-link {
+            color: #000;
+            text-decoration: none;
+            font-weight: 400;
+            font-size: 14px;
+            transition: color 0.3s;
+            white-space: nowrap;
+        }
+        
+        .nav-link:hover {
+            color: #81D8D0;
+        }
+        
+        .nav-link.active {
+            color: #81D8D0;
+            font-weight: 600;
+        }
+        
+        /* Breadcrumb */
+        .breadcrumb {
+            background-color: #d1d1d1;
+            padding: 20px;
+        }
+        
+        .breadcrumb-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            font-size: 14px;
+            color: #858585;
+        }
+        
+        .breadcrumb a {
+            color: #4299e1;
+            text-decoration: none;
+        }
+        
+        /* Hero */
+        .hero {
+            background-image: url('images/hero-olga.jpg');
+            background-size: cover;
+            background-position: center;
+            padding: 120px 20px;
+            text-align: center;
+            color: #fff;
+            position: relative;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.4);
+            z-index: 1;
+        }
+        
+        .hero h1,
+        .hero p {
+            position: relative;
+            z-index: 2;
+        }
+        
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+            font-weight: 700;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+        
+        .hero p {
+            font-size: 24px;
+            font-weight: 300;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+        }
+        
+        /* CTA Club Banner */
+        .club-banner {
+            background-color: #fff;
+            padding: 60px 20px;
+            text-align: center;
+        }
+        
+        .club-banner-inner {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .club-banner h2 {
+            font-size: 32px;
+            color: #1a202c;
+            margin-bottom: 20px;
+        }
+        
+        .club-banner p {
+            font-size: 18px;
+            color: #718096;
+            margin-bottom: 30px;
+        }
+        
+        .club-button {
+            display: inline-block;
+            background-color: #ff0000;
+            color: #fff;
+            padding: 18px 40px;
+            font-size: 16px;
+            font-weight: 700;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: opacity 0.3s;
+        }
+        
+        .club-button:hover {
+            opacity: 0.8;
+        }
+        
+        /* Articles Grid */
+        .articles-section {
+            background-color: #fff;
+            padding: 60px 20px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .section-title {
+            font-size: 36px;
+            color: #1a202c;
+            margin-bottom: 50px;
+            text-align: center;
+        }
+        
+        .articles-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 0;
+        }
+        
+        .article-box {
+            position: relative;
+            height: 400px;
+            background-size: cover;
+            background-position: center;
+            overflow: hidden;
+        }
+        
+        .article-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(to bottom, rgba(0,0,0,0.50), rgba(0,0,0,0.60));
+            display: flex;
+            align-items: flex-end;
+            padding: 30px;
+            transition: background 0.3s;
+        }
+        
+        .article-box:hover .article-overlay {
+            background: linear-gradient(to bottom, rgba(0,0,0,0.60), rgba(0,0,0,0.70));
+        }
+        
+        .article-content {
+            color: #fff;
+        }
+        
+        .article-title {
+            font-size: 24px;
+            font-weight: 700;
+            line-height: 1.3;
+            margin-bottom: 10px;
+        }
+        
+        .article-descr {
+            font-size: 18px;
+            font-weight: 300;
+        }
+        
+        /* Footer */
+        .footer {
+            background-color: #111;
+            color: #fff;
+            padding: 25px 20px;
+        }
+        
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            font-size: 14px;
+        }
+        
+        .footer a {
+            color: #fff;
+            text-decoration: none;
+            border-bottom: 1px solid #fff;
+        }
+        
+        .footer a:hover {
+            opacity: 0.7;
+        }
+        
+        @media (max-width: 960px) {
+            .articles-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .hero h1 {
+                font-size: 36px;
+            }
+        }
+        
+        @media (max-width: 640px) {
+            .articles-grid {
+                grid-template-columns: 1fr;
+            }
+            .hero h1 {
+                font-size: 28px;
+            }
+            .hero p {
+                font-size: 18px;
+            }
+            .footer-container {
+                flex-direction: column;
+                gap: 15px;
+                text-align: center;
+            }
+        }
+    </style>
+
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+(function(m,e,t,r,i,k,a){
+m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+m[i].l=1*new Date();
+for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+})(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=106776897', 'ym');
+ym(106776897, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/106776897" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-container">
+            <a href="https://kakzhivutdrugie.ru" class="logo">Как Живут Другие</a>
+            <nav class="nav-menu">
+                <a href="/" class="nav-link active">Главная</a>
+                <a href="/vannye-komnaty.html" class="nav-link">Ванные комнаты</a>
+                <a href="/stil-zhizni.html" class="nav-link">Стиль жизни</a>
+                <a href="https://kakzhivutdrugie.ru/klub#rec1894062431" class="nav-link">Клуб</a>
+            </nav>
+        </div>
+    </header>
+    
+    <!-- Breadcrumb -->
+    <div class="breadcrumb">
+        <div class="breadcrumb-container">
+            <a href="https://kakzhivutdrugie.ru">Главная</a> → Блог
+        </div>
+    </div>
+    
+    <!-- Hero -->
+    <section class="hero">
+        <h1>Блог</h1>
+        <p>Полезные статьи о ремонте и быте</p>
+    </section>
+    
+    <!-- Club Banner -->
+    <section class="club-banner">
+        <div class="club-banner-inner">
+            <h2>Присоединяйтесь к закрытому клубу!</h2>
+            <p>Эксклюзивные материалы, личные консультации и сообщество единомышленников</p>
+            <a href="https://kakzhivutdrugie.ru/klub#rec1894062431" class="club-button">Вступить в клуб</a>
+        </div>
+    </section>
+    
+    <!-- Articles -->
+    <section class="articles-section">
+        <div class="container">
+            <div class="articles-grid">
+                <a href="top-5-receptov-kulichey.html" class="article-box" style="background-image: url('images/kulich-hero.jpg');">
+                    <div class="article-overlay">
+                        <div class="article-content">
+                            <div class="article-title">Топ-5 рецептов пасхальных куличей 2026: от классики до экспериментов</div>
+                            <div class="article-descr">Лучшие проверенные рецепты к Пасхе</div>
+                        </div>
+                    </div>
+                </a>
+                
+                <a href="kak-krasivo-pokrasit-yaytsa.html" class="article-box" style="background-image: url('images/eggs-infographic.jpg');">
+                    <div class="article-overlay">
+                        <div class="article-content">
+                            <div class="article-title">Как красиво покрасить яйца: 10 современных техник 2026</div>
+                            <div class="article-descr">Натуральные красители и модные идеи</div>
+                        </div>
+                    </div>
+                </a>
+                
+                <a href="paschalnyy-dekor-doma.html" class="article-box" style="background-image: url('images/decor-bunnies.jpg');">
+                    <div class="article-overlay">
+                        <div class="article-content">
+                            <div class="article-title">Пасхальный декор дома: идеи для уютной атмосферы 2026</div>
+                            <div class="article-descr">Создайте праздничное настроение</div>
+                        </div>
+                    </div>
+                </a>
+                
+                <a href="paschalnyye-traditsii.html" class="article-box" style="background-image: url('images/kulich-hv.jpg');">
+                    <div class="article-overlay">
+                        <div class="article-content">
+                            <div class="article-title">Пасхальные традиции: что важно знать в 2026 году</div>
+                            <div class="article-descr">История, символы и семейные ритуалы</div>
+                        </div>
+                    </div>
+                </a>
+                
+                <a href="sekrety-hraneniya-vannaya.html" class="article-box" style="background-image: url('images/hranenie-vannaya-hero.jpg');">
+                    <div class="article-overlay">
+                        <div class="article-content">
+                            <div class="article-title">Секреты хранения вещей в ванной комнате: 15 умных решений</div>
+                            <div class="article-descr">Как организовать порядок без лишних затрат</div>
+                        </div>
+                    </div>
+                </a>
+                
+                <a href="mebel-dlya-vannoy.html" class="article-box" style="background-image: url('images/mebel-hero.jpg');">
+                    <div class="article-overlay">
+                        <div class="article-content">
+                            <div class="article-title">Мебель для ванной комнаты: как выбрать идеальный вариант?</div>
+                            <div class="article-descr">Гид по материалам, стилям и размерам</div>
+                        </div>
+                    </div>
+                </a>
+                
+                <a href="uhod-za-santehnikoy.html" class="article-box" style="background-image: url('images/santehnika-hero.jpg');">
+                    <div class="article-overlay">
+                        <div class="article-content">
+                            <div class="article-title">Уход за сантехникой: 10 полезных советов</div>
+                            <div class="article-descr">Эффективные методы чистки и защиты</div>
+                        </div>
+                    </div>
+                </a>
+                
+                <a href="layfhaki-uhod-vannaya.html" class="article-box" style="background-image: url('images/uhod-vannaya-hero.jpg');">
+                    <div class="article-overlay">
+                        <div class="article-content">
+                            <div class="article-title">Лайфхаки по уходу за ванной комнатой: 10 советов от профессионалов</div>
+                            <div class="article-descr">Поддерживайте идеальную чистоту легко!</div>
+                        </div>
+                    </div>
+                </a>
+                
+                <a href="rasteniya-dlya-vannoy.html" class="article-box" style="background-image: url('images/rasteniya-vannaya-hero.jpg');">
+                    <div class="article-overlay">
+                        <div class="article-content">
+                            <div class="article-title">7 растений, которые идеально подходят для ванной комнаты</div>
+                            <div class="article-descr">Живые растения — красота и польза</div>
+                        </div>
+                    </div>
+                </a>
+                
+                <a href="yaponskie-vannye.html" class="article-box" style="background-image: url('images/yaponskie-vannye-hero.jpg');">
+                    <div class="article-overlay">
+                        <div class="article-content">
+                            <div class="article-title">Японские ванные комнаты: философия минимализма и функциональности</div>
+                            <div class="article-descr">Принципы дизайна и ритуалы</div>
+                        </div>
+                    </div>
+                </a>
+                
+                <a href="steklo-v-vannoy.html" class="article-box" style="background-image: url('images/steklo-hero.jpg');">
+                    <div class="article-overlay">
+                        <div class="article-content">
+                            <div class="article-title">Стекло в ванной комнате: элегантность и практичность</div>
+                            <div class="article-descr">Душевые кабины, перегородки и декор</div>
+                        </div>
+                    </div>
+                </a>
+                
+                <a href="sssr-vs-sovremennost.html" class="article-box" style="background-image: url('images/sssr-hero.jpg');">
+                    <div class="article-overlay">
+                        <div class="article-content">
+                            <div class="article-title">Ванные комнаты: СССР vs Современность</div>
+                            <div class="article-descr">Как изменились ванные за десятилетия</div>
+                        </div>
+                    </div>
+                </a>
+                
+                <a href="dush-ili-vanna-7-mifov.html" class="article-box" style="background-image: url('images/dush-vanna-hero.jpg');">
+                    <div class="article-overlay">
+                        <div class="article-content">
+                            <div class="article-title">Душ или ванна: 7 мифов, в которые пора перестать верить</div>
+                            <div class="article-descr">Развенчиваем популярные заблуждения</div>
+                        </div>
+                    </div>
+                </a>
+                
+                <a href="vannye-komnaty-budushchego.html" class="article-box" style="background-image: url('images/budushchee-hero.jpg');">
+                    <div class="article-overlay">
+                        <div class="article-content">
+                            <div class="article-title">Ванные комнаты будущего: технологии, которые изменят нашу жизнь</div>
+                            <div class="article-descr">Умные технологии и инновации</div>
+                        </div>
+                    </div>
+                </a>
+                
+                <a href="5-oshibok-remont.html" class="article-box" style="background-image: url('images/remont-hero.jpg');">
+                    <div class="article-overlay">
+                        <div class="article-content">
+                            <div class="article-title">5 ошибок, которые все совершают при ремонте ванной комнаты</div>
+                            <div class="article-descr">Как избежать дорогих ошибок</div>
+                        </div>
+                    </div>
+                </a>
+                
+                <a href="smesiteli-dushi-rakoviny.html" class="article-box" style="background-image: url('images/steklo-dush.jpg');">
+                    <div class="article-overlay">
+                        <div class="article-content">
+                            <div class="article-title">Смесители, души, раковины: как выбрать правильную сантехнику</div>
+                            <div class="article-descr">Гид по выбору сантехники</div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div>ИП Качанова О. С. © 2026 <strong>«Как живут другие»</strong></div>
+            <div><a href="https://kakzhivutdrugie.ru/klub#rec1894062431">Клуб «Просто быть»</a></div>
+            <div><a href="https://kakzhivutdrugie.ru">Вернуться на главную</a></div>
+        </div>
+    </footer>
+</body>
+</html>
