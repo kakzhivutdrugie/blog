@@ -3,134 +3,229 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Блог | Как живут другие</title>
-    <meta name="description" content="Честные истории о ремонте, дизайне и том, как создать дом своей мечты. Статьи от Ольги Качановой.">
+    <title>Блог "Как живут другие" — Каталог статей по комнатам</title>
+    <meta name="description" content="Практические советы по дизайну интерьера от Ольги Качановой. Статьи о ванных комнатах, гостиных и других пространствах.">
+    
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript">
+       (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+       m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+       (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+       ym(106776897, "init", {clickmap:true,trackLinks:true,accurateTrackBounce:true});
+    </script>
+    <noscript><div><img src="https://mc.yandex.ru/watch/106776897" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; color: #2d3748; background: #f7fafc; }
-        .header { background: #fff; padding: 30px 20px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
-        .header-container { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px; }
-        .logo { font-size: 24px; color: #2d3748; font-weight: 700; text-decoration: none; }
-        .nav-menu { display: flex; gap: 25px; }
-        .nav-link { color: #4a5568; text-decoration: none; font-weight: 500; transition: color 0.3s; }
-        .nav-link:hover { color: #81D8D0; }
-        .nav-link.active { color: #81D8D0; font-weight: 600; }
-        .container { max-width: 1200px; margin: 60px auto; padding: 0 20px; }
-        .page-title { font-size: 48px; font-weight: 700; color: #1a202c; margin-bottom: 20px; text-align: center; }
-        .page-subtitle { font-size: 20px; color: #718096; margin-bottom: 60px; text-align: center; }
-        .articles-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(350px, 1fr)); gap: 30px; }
-        .article { border-radius: 12px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.1); transition: transform 0.3s; }
-        .article:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.15); }
-        .article-box { display: block; width: 100%; height: 300px; background-size: cover; background-position: center; position: relative; text-decoration: none; }
-        .article-overlay { position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(to top, rgba(0,0,0,0.9), rgba(0,0,0,0.3)); padding: 30px 20px; }
-        .article-title { font-size: 22px; font-weight: 700; color: #fff; margin-bottom: 10px; }
-        .article-desc { font-size: 16px; color: rgba(255,255,255,0.9); }
-        @media (max-width: 768px) { .articles-grid { grid-template-columns: 1fr; } .page-title { font-size: 36px; } }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f9f9f9;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        
+        header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+        
+        .subtitle {
+            font-size: 1.2rem;
+            color: #7f8c8d;
+        }
+        
+        .room-section {
+            background: white;
+            border-radius: 12px;
+            padding: 30px;
+            margin-bottom: 40px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        
+        .room-section h2 {
+            font-size: 2rem;
+            color: #2c3e50;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .room-section h2 .emoji {
+            font-size: 2.5rem;
+        }
+        
+        .articles-list {
+            list-style: none;
+        }
+        
+        .articles-list li {
+            padding: 15px 0;
+            border-bottom: 1px solid #ecf0f1;
+        }
+        
+        .articles-list li:last-child {
+            border-bottom: none;
+        }
+        
+        .articles-list a {
+            color: #3498db;
+            text-decoration: none;
+            font-size: 1.1rem;
+            transition: color 0.2s;
+        }
+        
+        .articles-list a:hover {
+            color: #2980b9;
+            text-decoration: underline;
+        }
+        
+        .count {
+            color: #95a5a6;
+            font-size: 0.9rem;
+            margin-left: 10px;
+        }
+        
+        footer {
+            text-align: center;
+            margin-top: 60px;
+            padding: 20px;
+            color: #7f8c8d;
+        }
+        
+        footer a {
+            color: #e74c3c;
+            text-decoration: none;
+        }
+        
+        footer a:hover {
+            text-decoration: underline;
+        }
+        
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+            
+            .room-section h2 {
+                font-size: 1.5rem;
+            }
+            
+            .articles-list a {
+                font-size: 1rem;
+            }
+        }
     </style>
 </head>
 <body>
-    <header class="header">
-        <div class="header-container">
-            <a href="https://kakzhivutdrugie.ru" class="logo">Как живут другие</a>
-            <nav class="nav-menu">
-                <a href="https://kakzhivutdrugie.ru" class="nav-link">Главная</a>
-                <a href="https://blog.kakzhivutdrugie.ru" class="nav-link active">Блог</a>
-                <a href="https://paywall.pw/zqdwbwnnnlxr" class="nav-link">Клуб</a>
-            </nav>
-        </div>
-    </header>
     <div class="container">
-        <h1 class="page-title">Блог</h1>
-        <p class="page-subtitle">Честные истории о ремонте, дизайне и том, как создать дом своей мечты</p>
-        <div class="articles-grid">
-            <div class="article">
-                <a href="kvartira-svetlaya-bez-pereplanirovki.html" class="article-box" style="background-image: url('images/alina-17-spalnya-tropiki.jpg');">
-                    <div class="article-overlay">
-                        <div class="article-content">
-                            <h3 class="article-title">Как сделать квартиру светлой без перепланировки</h3>
-                            <p class="article-desc">Свет и цвет: простые приёмы от архитектора</p>
-                        </div>
-                    </div>
-                </a>
-            </div>
+        <header>
+            <h1>📚 Блог "Как живут другие"</h1>
+            <p class="subtitle">Практические советы по дизайну интерьера от Ольги Качановой</p>
+        </header>
+        
+        <main>
 
-            <div class="article">
-                <a href="detskaya-zonirovanie.html" class="article-box" style="background-image: url('images/alina-08-spalnya.jpg');">
-                    <div class="article-overlay">
-                        <div class="article-content">
-                            <h3 class="article-title">Детская на двоих: зонирование без стен</h3>
-                            <p class="article-desc">4 детей в хрущёвке - как организовать пространство</p>
-                        </div>
-                    </div>
-                </a>
-            </div>
+            <section class="room-section">
+                <h2><span class="emoji">🛁</span> Ванная комната <span class="count">(7 статей)</span></h2>
+                <ul class="articles-list">
+                    <li><a href="мебель-для-ванной.html">Мебель для ванной: как выбрать и расставить</a></li>
+                    <li><a href="смесители-души-раковины.html">Смесители, души, раковины: полный гид по выбору</a></li>
+                    <li><a href="душ-или-ванна.html">Душ или ванна: 7 мифов и реальность</a></li>
+                    <li><a href="биофильный-дизайн-ванная.html">Биофильный дизайн в ванной комнате</a></li>
+                    <li><a href="стекло-в-ванной.html">Стекло в ванной: правила выбора душевых перегородок</a></li>
+                    <li><a href="уход-за-сантехникой.html">Уход за сантехникой: 10 советов для чистоты</a></li>
+                    <li><a href="японские-ванные.html">Японские ванные комнаты: 10 фактов об офуро и сэнто</a></li>
+                </ul>
+            </section>
 
-            <div class="article">
-                <a href="kuhnya-nestandartnye-resheniya.html" class="article-box" style="background-image: url('images/alina-05-kuhnya.jpg');">
-                    <div class="article-overlay">
-                        <div class="article-content">
-                            <h3 class="article-title">5 нестандартных решений для маленькой кухни</h3>
-                            <p class="article-desc">Кухня-гостиная 45 кв.м: что сработало</p>
-                        </div>
-                    </div>
-                </a>
-            </div>
-
-            <div class="article">
-                <a href="remont-million-budget.html" class="article-box" style="background-image: url('images/alina-02-gostinaya.jpg');">
-                    <div class="article-overlay">
-                        <div class="article-content">
-                            <h3 class="article-title">Ремонт на миллион: куда ушли деньги</h3>
-                            <p class="article-desc">Архитектор показывает детальную разбивку бюджета на ремонт 45 кв.м</p>
-                        </div>
-                    </div>
-                </a>
-            </div>
-
-            <div class="article">
-                <a href="deti-v-hrushchevke.html" class="article-box" style="background-image: url('images/alina-08-spalnya.jpg');">
-                    <div class="article-overlay">
-                        <div class="article-content">
-                            <h3 class="article-title">Как разместить 4 детей в хрущёвке</h3>
-                            <p class="article-desc">Спальные решения для большой семьи в маленькой квартире</p>
-                        </div>
-                    </div>
-                </a>
-            </div>
-
-            <div class="article">
-                <a href="dush-ili-vanna-chto-vybrat.html" class="article-box" style="background-image: url('telegram-media/file_347.jpg');">
-                    <div class="article-overlay">
-                        <div class="article-content">
-                            <h3 class="article-title">Душ или ванна: что выбрать</h3>
-                            <p class="article-desc">Практическое сравнение для вашего удобства</p>
-                        </div>
-                    </div>
-                </a>
-            </div>
-
-            <div class="article">
-                <a href="teplyy-pol-v-vannoy.html" class="article-box" style="background-image: url('telegram-media/file_346.jpg');">
-                    <div class="article-overlay">
-                        <div class="article-content">
-                            <h3 class="article-title">Теплый пол в доме</h3>
-                            <p class="article-desc">Выбираем между электрическим и водяным подогревом</p>
-                        </div>
-                    </div>
-                </a>
-            </div>
-
-            <div class="article">
-                <a href="dostupnaya-sreda-v-vannoy.html" class="article-box" style="background-image: url('telegram-media/file_345.jpg');">
-                    <div class="article-overlay">
-                        <div class="article-content">
-                            <h3 class="article-title">Доступная среда в ванной</h3>
-                            <p class="article-desc">Как сделать ванную комнату удобной для всех</p>
-                        </div>
-                    </div>
-                </a>
-            </div>
-        </div>
+            <section class="room-section">
+                <h2><span class="emoji">🛋️</span> Гостиная <span class="count">(58 статей)</span></h2>
+                <ul class="articles-list">
+                    <li><a href="статья-гостиная-01-личность.html">Как сделать гостиную отражением вашей личности: 7 способов</a></li>
+                    <li><a href="статья-гостиная-02-батареи.html">Как спрятать батареи в гостиной: 5 практичных способов</a></li>
+                    <li><a href="статья-гостиная-03-треугольник.html">Правило треугольника в дизайне интерьера: как использовать в гостиной</a></li>
+                    <li><a href="статья-гостиная-04-диван.html">Диван в гостиной: как выбрать главный предмет мебели</a></li>
+                    <li><a href="статья-гостиная-05-свет.html">Верхний, средний, нижний свет в гостиной: зачем нужны все три</a></li>
+                    <li><a href="статья-гостиная-06-переделка.html">Простые способы обновить гостиную без ремонта</a></li>
+                    <li><a href="статья-гостиная-07-картины.html">Как организовать группу картин на стене: правила композиции</a></li>
+                    <li><a href="статья-гостиная-08-проектор-тв.html">Проектор или телевизор: что выбрать для гостиной в 2026 году</a></li>
+                    <li><a href="статья-гостиная-09-текстиль.html">Текстиль для уюта: пледы, подушки, ковры в гостиной</a></li>
+                    <li><a href="статья-гостиная-10-интересы.html">Персональные интересы в интерьере гостиной: как показать себя через дизайн</a></li>
+                    <li><a href="статья-гостиная-11-цвет.html">Психология цвета в гостиной: как оттенки влияют на настроение и поведение</a></li>
+                    <li><a href="статья-гостиная-12-освещение.html">Освещение в гостиной: как создать многоуровневую систему света</a></li>
+                    <li><a href="статья-гостиная-13-текстиль.html">Текстиль в гостиной: как выбрать шторы, подушки и пледы для уюта</a></li>
+                    <li><a href="статья-гостиная-14-ковер.html">Ковёр в гостиной: как выбрать размер, материал и стиль</a></li>
+                    <li><a href="статья-гостиная-15-акцент.html">Акцентная стена в гостиной: 7 способов создать фокусную точку</a></li>
+                    <li><a href="статья-гостиная-16-зонирование.html">Зонирование гостиной: как разделить пространство без перегородок</a></li>
+                    <li><a href="статья-гостиная-17-хранение.html">Хранение в гостиной: как организовать вещи красиво и функционально</a></li>
+                    <li><a href="статья-гостиная-18-телевизор.html">Телевизор в гостиной: высота, расстояние и оформление ТВ-зоны</a></li>
+                    <li><a href="статья-гостиная-19-растения.html">Растения в гостиной: какие выбрать и как разместить</a></li>
+                    <li><a href="статья-гостиная-20-камин.html">Камин в гостиной: виды, размещение и оформление</a></li>
+                    <li><a href="статья-гостиная-21-книги.html">Книжные полки в гостиной: как организовать библиотеку</a></li>
+                    <li><a href="статья-гостиная-22-барная-стойка.html">Барная стойка в гостиной: когда уместна и как оформить</a></li>
+                    <li><a href="статья-гостиная-23-рабочее-место.html">Рабочее место в гостиной: как организовать домашний офис</a></li>
+                    <li><a href="статья-гостиная-24-музыка.html">Музыкальная зона в гостиной: акустика и хранение</a></li>
+                    <li><a href="статья-гостиная-25-игры.html">Игровая зона в гостиной: настольные игры и хобби</a></li>
+                    <li><a href="статья-гостиная-26-детский-уголок.html">Детский уголок в гостиной: безопасность и порядок</a></li>
+                    <li><a href="статья-гостиная-27-винтаж.html">Винтажная мебель в современной гостиной: как создать стильный микс эпох</a></li>
+                    <li><a href="статья-гостиная-28-трансформеры.html">Трансформируемая мебель для гостиной: как выбрать универсальные решения в 2026 году</a></li>
+                    <li><a href="статья-гостиная-29-модульная-мебель.html">Модульная мебель: как собрать идеальную композицию</a></li>
+                    <li><a href="статья-гостиная-30-встроенная-мебель.html">Встроенная мебель в гостиной: плюсы и минусы</a></li>
+                    <li><a href="статья-гостиная-31-пуфы.html">Пуфы и банкетки в гостиной: как использовать</a></li>
+                    <li><a href="статья-гостиная-32-качалки.html">Кресло-качалка и подвесные кресла в гостиной: выбор и размещение</a></li>
+                    <li><a href="статья-гостиная-33-зеркала.html">Зеркала в гостиной: размещение и рамы</a></li>
+                    <li><a href="статья-гостиная-34-картины.html">Картины и постеры в гостиной: как выбрать и повесить</a></li>
+                    <li><a href="статья-гостиная-35-часы.html">Часы в гостиной: стиль и размещение</a></li>
+                    <li><a href="статья-гостиная-36-декор.html">Вазы и декоративные объекты в гостиной: как создать гармоничный интерьер</a></li>
+                    <li><a href="статья-гостиная-37-сезонный-декор.html">Сезонный декор гостиной: как менять настроение комнаты</a></li>
+                    <li><a href="статья-гостиная-38-ароматы.html">Ароматы для гостиной: свечи, диффузоры и благовония</a></li>
+                    <li><a href="статья-гостиная-39-звукоизоляция.html">Звукоизоляция гостиной: материалы и методы</a></li>
+                    <li><a href="статья-гостиная-40-эргономика.html">Как расставить мебель в маленькой гостиной: правила эргономики</a></li>
+                    <li><a href="статья-гостиная-41-освещение-ошибки.html">Ошибки в освещении гостиной: почему комната выглядит неуютно</a></li>
+                    <li><a href="статья-гостиная-42-шторы-жалюзи.html">Шторы vs жалюзи: что лучше для гостиной</a></li>
+                    <li><a href="статья-гостиная-43-альтернативы-картинам.html">Альтернативы картинам: что повесить на стену в гостиной</a></li>
+                    <li><a href="статья-гостиная-44-большая-семья.html">Гостиная для большой семьи: как учесть интересы всех</a></li>
+                    <li><a href="статья-гостиная-45-звук-музыка.html">Звук и музыка в гостиной: акустика, колонки, фоновое звучание</a></li>
+                    <li><a href="статья-гостиная-46-хобби.html">Хобби в интерьере: 10 идей для гостиной энтузиаста</a></li>
+                    <li><a href="статья-гостиная-47-диван-кровать.html">Диван вместо кровати: альтернативные решения для гостиной</a></li>
+                    <li><a href="статья-гостиная-48-комод-реставрация.html">Как перекрасить бабушкин комод: вторая жизнь старой мебели</a></li>
+                    <li><a href="статья-гостиная-49-скатерти-салфетки.html">Скатерти и салфетки: как выбрать текстиль для гостиной</a></li>
+                    <li><a href="статья-гостиная-50-кабинет.html">Гостиная-кабинет: 7 способов совместить работу и отдых</a></li>
+                    <li><a href="статья-гостиная-51-домашний-кинотеатр.html">Как смотреть кино дома: проектор, экран, затемнение</a></li>
+                    <li><a href="статья-гостиная-52-минимализм.html">Минимализм в гостиной: как не перегрузить пространство</a></li>
+                    <li><a href="статья-гостиная-53-сервировка-стола.html">Правила сервировки обеденного стола в гостиной: полное руководство 2026</a></li>
+                    <li><a href="статья-гостиная-54-обивка-дивана.html">Обивка дивана: какие ткани выбрать и почему</a></li>
+                    <li><a href="статья-гостиная-55-батареи-интеграция.html">Батареи в интерьере гостиной: 9 способов интеграции</a></li>
+                    <li><a href="статья-гостиная-56-антикварная-мебель.html">Антикварная мебель в современной гостиной: как сочетать стили без превращения в музей</a></li>
+                    <li><a href="статья-гостиная-57-кресла-пуфы.html">Кресла и пуфы в гостиной: как создать дополнительные места для сидения</a></li>
+                    <li><a href="статья-гостиная-58-стол.html">Стол в гостиной: как выбрать размер, материал, стиль</a></li>
+                </ul>
+            </section>
+        </main>
+        
+        <footer>
+            <p>Все статьи написаны <strong>Ольгой Качановой</strong>, дизайнером интерьеров с 10+ лет опыта</p>
+            <p>Хотите больше советов? <a href="https://paywall.pw/zqdwbwnnnlxr" target="_blank">Вступайте в клуб "Как живут другие"</a></p>
+            <p><a href="https://youtu.be/5JGyNnYU5kU" target="_blank">YouTube канал</a></p>
+        </footer>
     </div>
 </body>
 </html>
